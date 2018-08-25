@@ -24,3 +24,22 @@ const nomnom =(mary, food) => {
 const bearSticks = nuggetizer('bear');
 console.log(nomnom('mary', bearSticks)); // mary devoured bear stix
 
+//function numberAdder that takes in a number and returns
+//the number plus 3. so input=22, output =25
+
+const numberAdder = (x) => {
+   const finalNumber = x + 3; 
+   printToDom(`<h2>${finalNumber}</h2>`, 'allTheNumbers');
+};
+
+const printToDom = (stringToPrint, divId) => {
+  const selectedDiv = document.getElementById(divId);
+  selectedDiv.innerHTML += stringToPrint;
+};
+
+numberAdder(22); //25
+numberAdder(2); //5
+numberAdder(4);
+numberAdder(5);
+
+printToDom('I am ready for lunch', 'feelings');
